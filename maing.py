@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
+app.template_folder = "home"
 EXP = [{
     "company": "Career NJNUN Mantra",
     "postion": "Social media marketing intern",
@@ -21,7 +22,7 @@ EXP = [{
 
 @app.route('/')
 def index():
-  return render_template('home.html', expr=EXP, fname="vk")
+  return render_template("home", expr=EXP, fname="vk")
 
 
 app.run(host='0.0.0.0', port=81, debug=True)
