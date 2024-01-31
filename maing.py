@@ -22,7 +22,7 @@ EXP = [{
 
 @app.route('/')
 def index():
-  return render_template("home123.html", expr=EXP, fname="vk")
+  return render_template('home123.html')
 
 
 app.run(host='0.0.0.0', port=81, debug=True)
